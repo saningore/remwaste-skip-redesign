@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+@layer components {
+  .skip-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .skip-price {
+    @apply text-2xl font-bold text-blue-600;
+  }
+  
+  .skip-button {
+    @apply bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors hover:bg-blue-700 flex items-center justify-center gap-2;
+  }
+  
+  .step-active {
+    @apply text-blue-600 font-medium;
+  }
+  
+  .step-completed {
+    @apply text-green-600;
+  }
+  
+  .step-inactive {
+    @apply text-gray-400;
+  }
+}
